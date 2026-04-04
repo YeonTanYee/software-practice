@@ -17,7 +17,7 @@ jobs:
         uses: actions/github-script@v7 # 최신 버전 사용 권장
         with:
           # 따로 발급할 필요 없는 기본 내장 토큰 사용
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.MY_PERSONAL_TOKEN }}
           script: |
             github.rest.issues.createComment({
               issue_number: context.payload.issue.number,
